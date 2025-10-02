@@ -1,5 +1,9 @@
+<script>
+    import TransactionForm from "../TransactionForm.svelte";
+
+</script>
 <main class="main-content">
-    <slot />
+    <TransactionForm />
 </main>
 
 <style>

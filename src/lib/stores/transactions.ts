@@ -1,21 +1,21 @@
 import type { Transaction } from "$lib/types/domain";
 import { writable } from "svelte/store";
 
-const STORAGE_KEY = "finance_transactions"
+const STORAGE_KEY = "finance_transactions";
 
-function loadFromStorage(): Transaction[]{
-    if (typeof window === "undefined") return []
-    const stored = localStorage.getItem(STORAGE_KEY)
-    return stored ? JSON.parse(stored) : []
+function loadFromStorage(): Transaction[] {
+    if (typeof window === "undefined") return [];
+    const stored = localStorage.getItem(STORAGE_KEY);
+    return stored ? JSON.parse(stored) : [];
 }
 
 export const transactions = writable<Transaction[]>(loadFromStorage());
 
 transactions.subscribe((value) => {
-    if (typeof window !== "undefined"){
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(value))
+    if (typeof window !== "undefined") {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(value));
     }
-})
+});
 
 export function addTransaction(transaction: Transaction) {
     transactions.update((items) => [...items, transaction]);
