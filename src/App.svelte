@@ -8,9 +8,9 @@
 
 <main>
     <div class="app-shell">
-        <Header />
+        <!-- <Header /> -->
         <div class="app-body">
-            <Sidebar />
+            <!-- <Sidebar /> -->
             <MainContent>
                 <section class="welcome">
                     <h2>Добро пожаловать в Finance Tracker</h2>

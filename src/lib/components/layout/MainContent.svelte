@@ -7,6 +7,7 @@
     <TransactionForm />
     <TransactionList />
 </main>
+
 <style>
     .main-content {
         flex: 1;

@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "TransactionForm.md",
+                "file": "Задание.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "TransactionForm"
+              "title": "Задание"
             }
           }
         ],
@@ -186,8 +186,8 @@
   },
   "active": "b3abb1875d1a319a",
   "lastOpenFiles": [
-    "Глобальные стили, первый каркас, структура файлов.md",
     "TransactionForm.md",
+    "Глобальные стили, первый каркас, структура файлов.md",
     "Задание.md",
     "Структура файлов.png",
     "Store, начало сторов.md",

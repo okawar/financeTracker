@@ -20,10 +20,10 @@
     }
 
     $: if ($accounts.length > 0 && accountId === 0) {
-        accountId = filteredCategories[0].id;
+        accountId = $accounts[0].id;
     }
 
-    function handleSubmit() {
+    async function handleSubmit() {
         if (amount <= 0) {
             alert("Сумма должна быть больше 0");
             return;
@@ -38,8 +38,7 @@
         }
 
         const now = new Date().toISOString();
-        addTransaction({
-            id: Date.now(),
+        await addTransaction({
             accountId,
             categoryId,
             amount,
